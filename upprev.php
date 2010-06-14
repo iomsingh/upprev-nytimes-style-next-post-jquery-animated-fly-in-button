@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: upPrev
-Plugin URI: http://item-9.com/
+Plugin Name: upPrev: NYTimes Style "Next Post" jQuery Animated Button
+Plugin URI: http://item-9.com/upPrev/
 Description: When scrolling upPrev will display a flyout box with a link to the previous post from the same category. <a href="options-general.php?page=upprev">Options configuration panel</a>
 Author: Jason Pelker, Grzegorz Krzyminski
 Version: 1.2
-Author URI: http://item-9.com/upPrev/
+Author URI: http://item-9.com/
 */
 
 include('upprev_settings.php');
