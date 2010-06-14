@@ -26,7 +26,7 @@ Just like the NYTimes button, upPrev allows WordPress site admins to provide the
 
 == Screenshots ==
 
-1. http://item-9.com/upprev-screen1.png
+1. screenshot-1.png
 
 == Changelog ==
 
