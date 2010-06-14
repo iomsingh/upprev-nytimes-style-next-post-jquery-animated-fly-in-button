@@ -2,9 +2,9 @@
 
 Contributors:      jpelker
 Plugin Name:       upPrev
-Plugin URI:        http://item-9.com/upPrev/
+Plugin URI:        http://item-9.com/
 Tags:              NYTimes, New York Times, Next Post, jQuery, Animation, Featured
-Author URI:        http://item-9.com
+Author URI:        http://item-9.com/upPrev/
 Author:            Grzegorz Krzyminski
 Donate link:       http://gkrzyminski.pl/
 Requires at least: 2.7 
@@ -14,16 +14,15 @@ Version:           1.2
 
 == Description ==
 
+We've created a WordPress Plugin to emulate the “Next Post” buttons you see once you scroll to the bottom of New York Times web articles.
+
+Video: http://www.youtube.com/watch?v=ZTrQGhWhCKs
+
 Just like the NYTimes button, upPrev allows WordPress site admins to provide the same functionality for their readers. When a reader scrolls to the bottom of a single post, a button animates in the page’s bottom right corner, allowing the reader to select the next available post in the single post’s category (the category is also clickable to access an archive page). If no next post exists, no button is displayed.
 
 == Installation ==
 
 1. Upload upPrev to your plugins directory, then activate the plugin through the 'Plugins' menu in WordPress.
-
-== Upgrade Notice ==
-
-= 1.2 =
-Upgrade to fix any remaining bugs from the initial release.
 
 == Screenshots ==
 
@@ -43,5 +42,3 @@ Fix to allow folder to be renamed.
 == Frequently Asked Questions ==
 
 = None =
-
-== Donations ==
