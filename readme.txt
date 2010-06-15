@@ -9,8 +9,8 @@ Author:            Grzegorz Krzyminski
 Donate link:       http://gkrzyminski.pl/
 Requires at least: 2.7 
 Tested up to:      3.0
-Stable tag:        1.0
-Version:           1.2
+Stable tag:        1.3
+Version:           1.3
 
 == Description ==
 
@@ -38,6 +38,9 @@ Bug fixes. Animation option menu.
 
 = 1.2 =
 Fix to allow folder to be renamed.
+
+= 1.3 =
+Bug fixes. Option to bring out the animation higher on the page added.
 
 == Frequently Asked Questions ==
 
