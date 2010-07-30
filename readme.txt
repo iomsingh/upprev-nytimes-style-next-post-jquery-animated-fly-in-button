@@ -9,8 +9,8 @@ Author:            Grzegorz Krzyminski
 Donate link:       http://gkrzyminski.pl/
 Requires at least: 2.7 
 Tested up to:      3.0
-Stable tag:        1.3.1
-Version:           1.3.1
+Stable tag:        1.3.2
+Version:           1.3.2
 
 == Description ==
 

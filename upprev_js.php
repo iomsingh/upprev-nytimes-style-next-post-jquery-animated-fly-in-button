@@ -12,8 +12,8 @@ elseif (file_exists("../../../../../../../../wp-config.php")){include("../../../
 
 $options = get_option("upprev-settings-group");
 $offset = floatval($options['upprev_offset'] == "" ? 100 : $options['upprev_offset']);
-$offset_comments = $options['upprev_offset_comments'];
-$comments_id = $options['upprev_comments_id'];
+$offset_element = $options['upprev_offset_element'];
+$element_selector = $options['upprev_element_selector'];
 $animation = $options['upprev_animation'] == "fade" ? "fade" : "flyout";
 
 print 'function getScrollY() {
@@ -30,19 +30,14 @@ print 'function getScrollY() {
 
 var $j = jQuery.noConflict();
 
-//$j(document).ready(function() {
-    //document.write("bleh");
-    //document.getElementById("comments").innerHTML = "bleh " + $j("#comments").offset().top;
-//});
-
 $j(function(){
     var upprev_closed = false;
     var upprev_hidden = true;
     $j(window).scroll(function() {
         ';
 
-if ($offset_comments) {
-    print 'var lastScreen = getScrollY() + $j(window).height() < $("#'. $comments_id .'").offset().top * '. $offset / 100 .' ? false : true;';
+if ($offset_element) {
+    print 'var lastScreen = getScrollY() + $j(window).height() < $("'. $element_selector .'").offset().top * '. $offset / 100 .' ? false : true;';
 } else {
     print 'var lastScreen = getScrollY() + $j(window).height() < $j(document).height() * '. $offset / 100 .' ? false : true;';
 }

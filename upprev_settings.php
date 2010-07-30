@@ -12,8 +12,8 @@ function upprev_settings_page() {
 	$options = array(
 		"upprev_animation" => $_POST["upprev_animation"],
                 "upprev_offset" => $_POST["upprev_offset"],
-                "upprev_offset_comments" => $_POST["upprev_offset_comments"],
-                "upprev_comments_id" => $_POST["upprev_comments_id"]
+                "upprev_offset_element" => $_POST["upprev_offset_element"],
+                "upprev_element_selector" => $_POST["upprev_element_selector"]
 		);
 	update_option("upprev-settings-group", $options);
 	echo '<div id="message" class="updated fade"><p>upPrev options saved.</p></div>';
@@ -45,11 +45,16 @@ function upprev_settings_page() {
                     <label for="offset">Offset:</label>
                 </th>
                 <td>
-                    <input type="text" id="offset" name="upprev_offset" value="<?php echo $options['upprev_offset'] == "" ? '100' : $options['upprev_offset']; ?>" maxlength="3" size="3" />%
-                    <span class="description" style="margin-left:15px;">Percentage of the page required to be scrolled to display a box.</span><br/>
-                    <input type="checkbox" id="offset_comments" name="upprev_offset_comments" title="If not selected, all page is taken into calculation. If selected, make sure to use the ID of an existing element." <?php echo $options['upprev_offset_comments'] != true ? "" : 'checked="checked"'; ?> />
-                    <label for="offset_comments" title="If not selected, all page is taken into calculation. If selected, make sure to use the ID of an existing element.">Before comments wrapper.</label>
-                    <label for="comments_id" >Element ID: </label><input type="text" id="comments_id" name="upprev_comments_id" value="<?php echo $options['upprev_comments_id'] == "" ? 'comments' : $options['upprev_comments_id']; ?>" />
+                    <div style="margin-bottom:5px;">
+                        <input type="text" id="offset" name="upprev_offset" value="<?php echo $options['upprev_offset'] == "" ? '100' : $options['upprev_offset']; ?>" maxlength="3" size="3" />%
+                        <span class="description" style="margin-left:15px;">Percentage of the page required to be scrolled to display a box.</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="offset_element" name="upprev_offset_element" <?php echo $options['upprev_offset_element'] != true ? "" : 'checked="checked"'; ?> />
+                        <label for="offset_element">Before HTML element.</label>
+                        <label for="element_selector" >Element selector: </label><input type="text" id="element_selector" name="upprev_element_selector" value="<?php echo $options['upprev_element_selector'] == "" ? '#comments' : $options['upprev_element_selector']; ?>" /><br/>
+                        <span class="description" >If not selected, all page length is taken for calculation. If selected, make sure to use the ID or class of an existing element. Put # "hash" before the ID, or . "dot" before a class name.</span>
+                    </div>
                 </td>
             </tr>
         </table>
