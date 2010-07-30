@@ -42,7 +42,7 @@ Fix to allow folder to be renamed.
 = 1.3 =
 Bug fixes. Option to bring out the animation higher on the page added.
 
-= 1.3.1 =
+= 1.3.2 =
 Option to bring out the animation before specified HTML element.
 
 == Frequently Asked Questions ==
