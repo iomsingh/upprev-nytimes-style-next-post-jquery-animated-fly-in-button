@@ -4,14 +4,20 @@ Plugin Name: upPrev: NYTimes Style "Next Post" Animated Button
 Plugin URI: http://item-9.com/upPrev/
 Description: When scrolling upPrev will display a flyout box with a link to the previous post from the same category. <a href="options-general.php?page=upprev">Options configuration panel</a>
 Author: Jason Pelker, Grzegorz Krzyminski
-Version: 1.2
+Version: 1.3.1
 Author URI: http://item-9.com/
 */
+
+global $upprev_currentPostID, $upprev_is_single;
 
 include('upprev_settings.php');
 
 function upprev_box() {
-    if (is_single() && get_adjacent_post(true, '', true)) {
+    //rewind_posts();
+    global $post, $upprev_currentPostID, $upprev_is_single;
+    $post = get_post($upprev_currentPostID);
+    setup_postdata(get_post($upprev_currentPostID));
+    if ($upprev_is_single && get_adjacent_post(true, '', true)) {
         $all_posts = array();
         $all_posts_str;
         // checking the order of the post in post's categories
@@ -40,23 +46,31 @@ function upprev_box() {
         echo '<button id="upprev_close" type="button">Close</button></div>';
     }
 }
-
 add_action('wp_footer', 'upprev_box');
 
 function upprev_head() {
+    unset($upprev_currentPostID);
+    unset($upprev_is_single);
     $plugin_path = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
     $options = get_option("upprev-settings-group");
     $sufix = $options['upprev_animation'] == "fade" ? "fade" : "flyout";
     echo '<link rel="stylesheet" type="text/css" href="'. $plugin_path .'upprev_'. $sufix .'.css" />
-    <script type="text/javascript" language="javascript" src="'. $plugin_path .'upprev_'. $sufix .'.js"></script>';
+    <script type="text/javascript" language="javascript" src="'. $plugin_path .'upprev_js.php"></script>';
 }
-
 add_action('wp_head', 'upprev_head');
+
+function upprev_cache() {
+    global $upprev_currentPostID, $upprev_is_single;
+    if (is_single() && !isset($upprev_currentPostID)) {
+        $upprev_currentPostID = get_the_ID();
+        $upprev_is_single = is_single();
+    }
+}
+add_action('the_post', 'upprev_cache');
 
 function upprev_jquery() {
     wp_enqueue_script("jquery");
 }
-
 add_action('plugins_loaded', 'upprev_jquery');
 
 ?>
