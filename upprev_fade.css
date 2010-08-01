@@ -1,0 +1,42 @@
+#upprev_box {
+    display:none;
+    position:fixed;
+    z-index:1000;
+    bottom:0px;
+    right: 0px;
+    width: 360px;
+    padding: 10px 20px 10px 10px;
+    border-top: 2px solid #000;
+    border-left: 1px solid #f0f0f0;
+    background-color: #fff;
+    -moz-box-shadow: 0 4px 10px #666;
+    -webkit-box-shadow: 0 4px 10px #666;
+    box-shadow: 0 4px 10px #666;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, direction=270, strength=7)";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, direction=270, strength=7);
+    _position: absolute;
+    _top: 0;
+}
+#upprev_box h6 {
+    margin:0 0 5px 0;
+    padding:0;
+    text-transform: uppercase;
+    font: bold 10px arial,helvetica,sans-serif;
+}
+#upprev_box .num {
+    color:#888;
+    font-weight:normal;
+}
+#upprev_box button {
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 13px;
+    height: 13px;
+    background: #fff url('close_window.gif') no-repeat 0 0;
+    text-indent: -999em;
+    overflow: hidden;
+    cursor: pointer;
+}
