@@ -9,8 +9,8 @@ Author:            Grzegorz Krzyminski
 Donate link:       http://gkrzyminski.pl/
 Requires at least: 2.7 
 Tested up to:      3.0
-Stable tag:        1.3.2
-Version:           1.3.2
+Stable tag:        1.3.3
+Version:           1.3.3
 
 == Description ==
 
@@ -44,6 +44,9 @@ Bug fixes. Option to bring out the animation higher on the page added.
 
 = 1.3.2 =
 Option to bring out the animation before specified HTML element.
+
+= 1.3.3 =
+Bug fixes. Make the plugin to work even if the HTML element was not found.
 
 == Frequently Asked Questions ==
 

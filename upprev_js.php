@@ -37,7 +37,11 @@ $j(function(){
         ';
 
 if ($offset_element) {
-    print 'var lastScreen = getScrollY() + $j(window).height() < $("'. $element_selector .'").offset().top * '. $offset / 100 .' ? false : true;';
+    print 'var lastScreen;
+        if ($j("'. $element_selector .'").length > 0)
+            lastScreen = getScrollY() + $j(window).height() < $j("'. $element_selector .'").offset().top * '. $offset / 100 .' ? false : true;
+        else
+            lastScreen = getScrollY() + $j(window).height() < $j(document).height() * '. $offset / 100 .' ? false : true;';
 } else {
     print 'var lastScreen = getScrollY() + $j(window).height() < $j(document).height() * '. $offset / 100 .' ? false : true;';
 }
