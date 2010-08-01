@@ -4,7 +4,7 @@ Plugin Name: upPrev: NYTimes Style "Next Post" Animated Button
 Plugin URI: http://item-9.com/upPrev/
 Description: When scrolling upPrev will display a flyout box with a link to the previous post from the same category. <a href="options-general.php?page=upprev">Options configuration panel</a>
 Author: Jason Pelker, Grzegorz Krzyminski
-Version: 1.3.2
+Version: 1.3.3
 Author URI: http://item-9.com/
 */
 
