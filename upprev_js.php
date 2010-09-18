@@ -28,30 +28,28 @@ print 'function getScrollY() {
     return scrOfY;
 }
 
-var $j = jQuery.noConflict();
-
-$j(function(){
+jQuery(function($){
     var upprev_closed = false;
     var upprev_hidden = true;
-    $j(window).scroll(function() {
+    $(window).scroll(function() {
         ';
 
 if ($offset_element) {
     print 'var lastScreen;
-        if ($j("'. $element_selector .'").length > 0)
-            lastScreen = getScrollY() + $j(window).height() < $j("'. $element_selector .'").offset().top * '. $offset / 100 .' ? false : true;
+        if ($("'. $element_selector .'").length > 0)
+            lastScreen = getScrollY() + $(window).height() < $("'. $element_selector .'").offset().top * '. $offset / 100 .' ? false : true;
         else
-            lastScreen = getScrollY() + $j(window).height() < $j(document).height() * '. $offset / 100 .' ? false : true;';
+            lastScreen = getScrollY() + $(window).height() < $(document).height() * '. $offset / 100 .' ? false : true;';
 } else {
-    print 'var lastScreen = getScrollY() + $j(window).height() < $j(document).height() * '. $offset / 100 .' ? false : true;';
+    print 'var lastScreen = getScrollY() + $(window).height() < $(document).height() * '. $offset / 100 .' ? false : true;';
 }
     print '
         if (lastScreen && !upprev_closed) {
             ';
 if ($animation == "fade")
-    print '$j("#upprev_box").fadeIn("slow");';
+    print '$("#upprev_box").fadeIn("slow");';
 else
-    print '$j("#upprev_box").stop().animate({right:"0px"});';
+    print '$("#upprev_box").stop().animate({right:"0px"});';
 print '
             upprev_hidden = false;
         }
@@ -62,18 +60,18 @@ print '
             upprev_hidden = true;
             ';
 if ($animation == "fade")
-    print '$j("#upprev_box").fadeOut("slow");';
+    print '$("#upprev_box").fadeOut("slow");';
 else
-    print '$j("#upprev_box").stop().animate({right:"-400px"});';
+    print '$("#upprev_box").stop().animate({right:"-400px"});';
 print '
         }
     });
-    $j("#upprev_close").click(function() {
+    $("#upprev_close").click(function() {
         ';
 if ($animation == "fade")
-    print'$j("#upprev_box").fadeOut("slow");';
+    print'$("#upprev_box").fadeOut("slow");';
 else
-    print'$j("#upprev_box").stop().animate({right:"-400px"});';
+    print'$("#upprev_box").stop().animate({right:"-400px"});';
 print '
         upprev_closed = true;
         upprev_hidden = true;

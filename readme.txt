@@ -1,6 +1,6 @@
 === Plugin Name ===
 
-Contributors:      jpelker
+Contributors:      jpelker, gkrzyminski
 Plugin Name:       upPrev: NYTimes Style "Next Post" jQuery Animated Button
 Plugin URI:        http://item-9.com/upPrev/
 Tags:              NYTimes, New York Times, Next Post, jQuery, Animation, Featured
@@ -9,8 +9,8 @@ Author:            Grzegorz Krzyminski
 Donate link:       http://gkrzyminski.pl/
 Requires at least: 2.7 
 Tested up to:      3.0
-Stable tag:        1.3.3
-Version:           1.3.3
+Stable tag:        1.3.4
+Version:           1.3.4
 
 == Description ==
 
@@ -47,6 +47,10 @@ Option to bring out the animation before specified HTML element.
 
 = 1.3.3 =
 Bug fixes. Make the plugin to work even if the HTML element was not found.
+
+= 1.3.4 =
+
+Bug fixes. Resolved jQuery incompatibility issue and corrected number of posts in categories.
 
 == Frequently Asked Questions ==
 
