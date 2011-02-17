@@ -1,7 +1,7 @@
 === Plugin Name ===
 
 Contributors:      jpelker, gkrzyminski
-Plugin Name:       upPrev: NYTimes Style "Next Post" jQuery Animated Button
+Plugin Name:       upPrev
 Plugin URI:        http://item-9.com/upPrev/
 Tags:              NYTimes, New York Times, Next Post, jQuery, Animation, Featured
 Author URI:        http://item-9.com/upPrev/
