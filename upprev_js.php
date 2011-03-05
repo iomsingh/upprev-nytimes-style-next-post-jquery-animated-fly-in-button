@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 header("Content-type: text/javascript");
 if (file_exists("./wp-config.php")){include("./wp-config.php");}
 elseif (file_exists("../wp-config.php")){include("../wp-config.php");}
@@ -15,6 +16,7 @@ $offset = floatval($options['upprev_offset'] == "" ? 100 : $options['upprev_offs
 $offset_element = $options['upprev_offset_element'];
 $element_selector = $options['upprev_element_selector'];
 $animation = $options['upprev_animation'] == "fade" ? "fade" : "flyout";
+$position = $options['upprev_position'] != 'left' ? "right" : "left";
 
 print 'function getScrollY() {
     scrOfY = 0;
@@ -49,7 +51,7 @@ if ($offset_element) {
 if ($animation == "fade")
     print '$("#upprev_box").fadeIn("slow");';
 else
-    print '$("#upprev_box").stop().animate({right:"0px"});';
+    print '$("#upprev_box").stop().animate({'.$position.':"0px"});';
 print '
             upprev_hidden = false;
         }
@@ -62,7 +64,7 @@ print '
 if ($animation == "fade")
     print '$("#upprev_box").fadeOut("slow");';
 else
-    print '$("#upprev_box").stop().animate({right:"-400px"});';
+    print '$("#upprev_box").stop().animate({'.$position.':"-400px"});';
 print '
         }
     });
@@ -71,7 +73,7 @@ print '
 if ($animation == "fade")
     print'$("#upprev_box").fadeOut("slow");';
 else
-    print'$("#upprev_box").stop().animate({right:"-400px"});';
+    print'$("#upprev_box").stop().animate({'.$position.':"-400px"});';
 print '
         upprev_closed = true;
         upprev_hidden = true;

@@ -1,0 +1,104 @@
+/*
+Helpful links:
+    Text: http://www.w3schools.com/CSS/css_text.asp
+    Fonts: http://www.w3schools.com/CSS/css_font.asp
+    Background: http://www.w3schools.com/CSS/css_background.asp
+
+After applying and saving changes make sure to remove Temporary Internet files for you browser. Another way it may still using previously cached version of a stylesheet.
+*/
+
+#upprev_box {
+    /* === upPrev Container === */
+    text-align: left;
+    background-color: #fff;
+    bottom:0px; /* distance from window bottom edge */
+
+    position:fixed;
+    z-index:10000000;    
+    width: 360px;
+    padding: 10px 20px 10px 10px;
+    border-top: 2px solid #000;
+    border-left: 1px solid #f0f0f0;
+    -moz-box-shadow: 0 4px 10px #666;
+    -webkit-box-shadow: 0 4px 10px #666;
+    box-shadow: 0 4px 10px #666;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, direction=270, strength=7)";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, direction=270, strength=7);
+    _position: absolute;
+    _top: 0;
+}
+
+#upprev_box h6 {
+    /* === "MORE IN" === */
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: arial,helvetica,sans-serif;
+    color: inherit;
+    
+    margin:0 0 5px 0;
+    padding:0;   
+}
+
+#upprev_box h6 a {
+    /* === Category Link === */
+}
+#upprev_box h6 a:hover {
+    /* === Category Link: mouse over === */
+}
+#upprev_box h6 a:visited {
+    /* Category Link: visited */
+}
+
+#upprev_box h6 .num {
+    /* === "(1 of 5 ARTICLES)" === */
+    font-size: inherit;
+    font-weight:normal;
+    font-family: inherit;
+    color:#888;
+}
+
+#upprev_box .upprev_excerpt {
+    /* === Container for Title, Thumbnail and Excerpt === */
+    text-align:justify;
+}
+
+#upprev_box .upprev_excerpt p {
+    /* === Excerpt === */
+    overflow:hidden;
+    margin:0
+}
+
+#upprev_box .upprev_excerpt p a {
+    /* === Previous Post Link === */
+}
+
+#upprev_box .upprev_excerpt p a:hover {
+    /* === Previous Post Link: mouse over === */
+}
+
+#upprev_box .upprev_excerpt p a:visited {
+    /* === Previous Post Link: visited === */
+}
+
+#upprev_box .upprev_thumb {
+    /* === Thumbnail Image === */
+    float:left;
+    margin:5px 20px 0 0;
+    border: 0;
+}
+
+#upprev_box button {
+    /* === Close Button === */
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 13px;
+    height: 13px;
+    background: #fff url('close_window.gif') no-repeat 0 0;
+    text-indent: -999em;
+    overflow: hidden;
+    cursor: pointer;
+}
