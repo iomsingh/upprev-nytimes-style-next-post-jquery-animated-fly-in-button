@@ -8,7 +8,7 @@ Author URI:        http://item-9.com/upPrev/
 Author:            Grzegorz Krzyminski
 Donate link:       http://gkrzyminski.pl/
 Requires at least: 2.7 
-Tested up to:      3.0
+Tested up to:      3.1
 Stable tag:        1.4.0
 Version:           1.4.0
 
