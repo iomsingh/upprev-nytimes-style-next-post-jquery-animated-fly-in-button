@@ -69,7 +69,7 @@ add_shortcode( 'upprev', 'upprev_shortcode' );
 
 function upprev_cache() {
     global $upprev_currentPostID, $upprev_is_single;
-    if (is_single()) {
+    if (is_single() && !isset($upprev_currentPostID)) {
         $upprev_currentPostID = get_the_ID();
         $upprev_is_single = is_single();
     }
@@ -79,7 +79,7 @@ add_action('the_post', 'upprev_cache');
 function upprev_init() {
     $plugin_path = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
     wp_enqueue_script("jquery");
-    wp_enqueue_script("upprev-js",$plugin_path.'upprev_js.php');
+    wp_enqueue_script("upprev-js",$plugin_path.'upprev_js.php'); //wp_enqueue_script("upprev-js",$plugin_path.'upprev_js.php',array(),'1.4.0',true);
     wp_enqueue_style("upprev-css",$plugin_path.'upprev.css');
 }
 add_action('init', 'upprev_init');
